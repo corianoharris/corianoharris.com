@@ -164,7 +164,7 @@ h3 {
 
 nav {
   position: fixed;
-  top: 0;
+  top: 10px;
   right: 10px;
   display: flex;
   justify-content: space-between;
@@ -824,6 +824,9 @@ button.btn .circle .icon.arrow::before {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+
+
+
 .button-text {
   display: flex;
   justify-content: center;
@@ -853,9 +856,7 @@ button.btn .button-text {
   /* text-align: left; */
   margin-left: none;
 }
-/* button:hover .circle {
-  width: 100%;
-} */
+
 button:hover .circle .icon.arrow {
   background: #fff;
   -webkit-transform: translate(1rem, 0);
@@ -866,93 +867,10 @@ button:hover .button-text {
   color: #fff;
 }
 
-/* button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: 12px;
-  font-family: inherit;
+.email-link-text {
+  padding-left: 30px;
+  font-size: .7rem;
 }
-button.btn {
-  width: 250px;
-  height: auto;
-}
-button.btn .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #666;
-  border-radius: 1.625rem;
-}
-button.btn .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-button.btn .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-button.btn .circle .icon.arrow::before {
-  position: absolute;
-  content: '';
-  top: -0.25rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-.button-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button.btn .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0 0.75rem 25px;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: left;
-  text-transform: uppercase;
-}
-button:hover .circle {
-  width: 100%;
-}
-button:hover .circle .icon.arrow {
-  background: #fff;
-  -webkit-transform: translate(1rem, 0);
-          transform: translate(1rem, 0);
-}
-
-button:hover .button-text {
-  color: #fff;
-} */
 
 .project-link {
   position: relative;
