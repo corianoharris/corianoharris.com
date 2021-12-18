@@ -91,6 +91,10 @@ body {
   height: 100%;
 }
 
+h4 {
+  text-align: justify;
+}
+
 @media (min-width: 648px) {
   .app-wrapper {
       width: 80%;
@@ -120,6 +124,11 @@ a:active {
 
 .separator {
 margin: 30px 0;
+}
+
+.info-notify {
+  border-left: 5px solid white;
+  padding-left: 10px;
 }
 
 @media (min-width: 648px) {
@@ -385,6 +394,7 @@ picture {
   gap: 1rem;
   grid-template-columns: repeat(1, 1fr);
   justify-items: center;
+ height: auto;
 }
 
 @media (min-width: 648px) {
@@ -405,6 +415,7 @@ picture {
   height: auto;
   width: auto;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  word-wrap: break-word;
 }
 @media (min-width: 900px ) {
   .clients-project-card {
@@ -717,6 +728,8 @@ input:-webkit-autofill:focus {
 
 .form-info-notify {
   text-align: left;
+  font-size: .8rem;
+  font-style: italic;
 }
 
 .button-container {
@@ -955,4 +968,9 @@ button.btn .project-link-text {
   left: 10px;
   top: -40px;
   font-size: 1rem;
+}
+.project-info-notify {
+  border-bottom: 3px solid white;
+  font-weight: 700;
+  width: 280px;
 }
