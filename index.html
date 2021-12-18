@@ -27,7 +27,14 @@
         </div>
       </nav>
 
-      <p class="info-notify work-opportunity-message" >If you have a work opportunity email me at <span class="links email"><a href="#">email me</a></span></p>
+      <p class="info-notify work-opportunity-message" >If you have a work opportunity email me at <span class="link">
+        <button class="btn">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text"><a href="#">corianoharris@gmail.com</a></span>
+        </button>
+      </span></p>
 
       <h2>Me...</h2>
 
@@ -68,8 +75,21 @@
       <h2>Work...</h2>
 
       <div class="social-media">
-        <a class="links social-media-links" href="#">Github</a>
-        <a class="links social-media-links" href="#">LinkedIn</a>
+
+        <button class="btn social-media-links">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text social-media-links-text"><a href="" target="_blank">Github</a></span>
+        </button>
+
+        <button class="btn social-media-links">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text social-media-links-text"><a href="" target="_blank">LinkedIn</a></span>
+        </button>
+        
       </div>
 
       <section class="section">
@@ -139,32 +159,47 @@
 
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset=""/>
+              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of FedEx Tracking website" />
             </picture>
             <div class="card-info">
-              <h4 class="card-company">Company: <span>Partcycle</span></h4>
-              <h4 class="card-role">Role: <span>developer</span></h4>
-              <a class="links card-link" href="#">Live</a>
+              <h4 class="card-company">Company: <span>FedEx</span></h4>
+              <h4 class="card-role">Role: <span>UX/UI Designer && Developer</span></h4>
+              <button class="btn project-link">
+                <span class="circle">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.fedex.com/en-us/tracking/advanced.html" target="_blank">fedex tracking</a></span>
+              </button>
             </div>
           </div>
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset=""/>
+              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of PartCycle website"/>
             </picture>
             <div class="card-info">
-              <h4 class="card-company">Company: <span>Partcycle</span></h4>
+              <h4 class="card-company">Company: <span>PartCycle</span></h4>
               <h4 class="card-role">Role: <span>developer</span></h4>
-              <a class="links card-link" href="#">Live</a>
+              <button class="btn project-link">
+                <span class="circle">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.partcycle.com/" target="_blank">partcycle</a></span>
+              </button>
             </div>
           </div>
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset=""/>
+              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of My Supporter Account website"/>
             </picture>
             <div class="card-info">
-              <h4 class="card-company">Company: <span>Partcycle</span></h4>
+              <h4 class="card-company">Company: <span>ALSAC ( St. Jude Children's Hospital )</span></h4>
               <h4 class="card-role">Role: <span>developer</span></h4>
-              <a class="links card-link" href="#">Live</a>
+              <button class="btn project-link">
+                <span class="circle">
+                  <span class="icon arrow"></span>
+                </span>
+                <span class="button-text project-link-text"><a href="https://www.stjude.org/give/supporter-profile.html" target="_blank">Supporter Account</a></span>
+              </button>
             </div>
           </div>
         </div>
@@ -229,39 +264,59 @@
 
         <section class="section form">
 
-          <form action="">
+          <form 
+          name="contact"
+          method="POST"
+          role="form"
+				  aria-label="contact form">
             <label class="custom-field one" required>
-              <input type="text" placeholder="&nbsp;" pattern="^([a-z]|[A-Z]){2,200}"/>
+              <input 	id="name" type="text" placeholder="your name" pattern="^([\w ]+){2,200}" required/>
               <span class="placeholder">name<span>*</span></span>
+              <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
             </label>
                   
             <label class="custom-field two">
-              <input type="tel" placeholder="&nbsp;" pattern="^([0-9]){10, 11}"/>
+              <input id="phone" type="tel" maxlength="15" placeholder="000-000-0000" pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
+              />
               <span class="placeholder">phone numbers</span>
+              <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
             </label>
             
               <label class="custom-field three">
-                <input type="email" placeholder="&nbsp;" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
+                <input id="email" type="email" placeholder="username@domain" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
                 <span class="placeholder">email<span>*</span></span>
+                <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+              </label>
+
+              <label class="custom-field four">
+                <input id="subject" type="text" placeholder="title" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,50}"/>
+                <span class="placeholder">subject<span>*</span></span>
+                <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
               </label>
                   
-              <label class="custom-field four" required>
-                <textarea cols="30" rows="10" placeholder="&nbsp;" pattern="^([a-z]|[A-Z]|[0-9]){1,500}"></textarea>
+              <label class="custom-field five" required="required">
+                <textarea id="message" cols="30" rows="10" placeholder="Your message" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,500}"></textarea>
                 <span class="placeholder">Enter message</span>
+                <span class="validation-error-message validation-error-message-textarea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
               </label>
 
               <p class="info-notify form-info-notify" >Submitting this form will open and autopopulate your email client</span></p>
 
               <div class="button-container">
-                <button class="button"> Button</button>
+                <button id="submit"
+                  class="button" 
+                  aria-label="contact form submit button"> 
+                  Submit
+                </button>
               </div>
           </form>
 
         </section>
 
         <section class="section footer">
-          <p class="copyright"> Coriano Harris
-            <span>{ ...year...}</span>
+          <p class="copyright">&copy;
+            Coriano Harris
+            <span class="copyright-year"></span>
           </p>
         </section>
 
