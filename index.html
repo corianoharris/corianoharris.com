@@ -8,86 +8,81 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <div class="app-wrapper">
+    <div class="app-wrapper" role="main">
 
-      <nav class="nav">
+      <nav class="nav" role="navigation" aria-label="main navigation">
         <span class="nav-icon">
             &#926;
         </span>
         <div class="nav-items hidden">
-          <li class="nav-item">
-            <a href="#">me</a>
+          <li class="nav-item" aria-label="navigation me link">
+            <a href="#me">me</a>
           </li>
-          <li class="nav-item">
-            <a href="#">work</a>
+          <li class="nav-item" aria-label="navigation work link">
+            <a href="#work">work</a>
           </li>
-          <li class="nav-item">
-            <a href="#">Say Hi &#129306</a>
+          <li class="nav-item" aria-label="navigation contact link">
+            <a href="#contact">Say Hi &#129306</a>
           </li> 
         </div>
       </nav>
 
-      <p class="info-notify work-opportunity-message" >If you have a work opportunity email me at <span class="link">
-        <button class="btn">
-          <span class="circle">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text email-link-text"><a href="#">corianoharris@gmail.com</a></span>
-        </button>
-      </span></p>
-
-      <h2>Me...</h2>
+      <h2 id="me">Me...</h2>
 
       <section class="section">
 
         <div class="profile">
           <div class="profile-section-one">
             <div class="picture-profile">
-                    <img class="img profile-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset="">
-                    <p> Coriano Harris</p>
+                    <img class="img profile-img" src="./public/profile/Coriano.jpg" alt="image of coriano harris smiling" loading="lazy">
+                    <p class="my-name"> Coriano Harris</p>
+                    <button class="btn" role="button">
+                      <span class="circle">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="button-text email-link-text"><a href="mailto:corianoharris@gmail.com">corianoharris@gmail.com</a></span>
+                    </button>
                 </div>
                 <hr class="separator separator-profile-img">
                 <div class="profile-quotes">
                     <p class="quotes profile-quote">
-                        " Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi suscipit 
-                        quam doloremque eaque ipsum eligendi incidunt? Sed, aut dolorum tenetur quisquam 
-                        possimus assumenda dolore, maiores velit explicabo nostrum aspernatur consequatur nihil 
-                        provident eveniet non suscipit quam delectus eaque nemo illum nobis. At assumenda eligendi 
-                        provident nobis omnis ipsam enim?
+                        " I’m a researcher, designer, developer, and colorist who loves displaying empathy and 
+                        finding ways to be of service.  Outside of work, you can find me playing soccer, 
+                        letting go in improv, eating way too much french fries, dodging punches and kicks in krav maga and escaping underwater."
                     </p>
                 </div>
             </div>
           <hr class="separator">
           <div class="profile-section-two">
-            <h3 class="volunteering">Volunteering...</h3>
+            <h3 class="volunteering">Giving Back...</h3>
             <ul class="list clients-list">
-                <li class="list-items">company</li>
-                <li class="list-items">company</li>
-                <li class="list-items">company</li>
-                <li class="list-items">company</li>
-                <li class="list-items">company</li>
+                <li class="list-items">St. Jude</li>
+                <li class="list-items">Code Connector</li>
+                <li class="list-items">CodeCrew</li>
+                <li class="list-items">Tech901</li>
+                <li class="list-items">homeless shelter</li>
             </ul>
           </div>
         </div>
 
       </section>
 
-      <h2>Work...</h2>
+      <h2 id="work">Work...</h2>
 
       <div class="social-media">
 
-        <button class="btn social-media-links">
+        <button class="btn social-media-links" role="button">
           <span class="circle">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text social-media-links-text"><a href="" target="_blank">Github</a></span>
+          <span class="button-text social-media-links-text"><a href="https://github.com/corianoharris" target="_blank">Github</a></span>
         </button>
 
         <button class="btn social-media-links">
           <span class="circle">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text social-media-links-text"><a href="" target="_blank">LinkedIn</a></span>
+          <span class="button-text social-media-links-text"><a href="https://www.linkedin.com/in/corianoharris/" target="_blank">LinkedIn</a></span>
         </button>
         
       </div>
@@ -100,43 +95,37 @@
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi suscipit 
-              quam doloremque eaque ipsum eligendi incidunt? Sed, aut dolorum tenetur quisquam 
-              possimus assumenda dolore, maiores velit explicabo nostrum aspernatur consequatur nihil 
-              provident eveniet non suscipit quam delectus eaque nemo illum nobis. At assumenda eligendi 
-              provident nobis omnis ipsam enim?
+              " He did a masterful job creating posters, news flyers and
+							teasers. CORIANO HARRIS is EXTRAORDINARY! "
             </p>
               <picture class="picture-clients">
-                <img class="img clients-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset="">
-                <p>Lorem ipsum dolor sit.</p>
+                <img class="img clients-img" src="./public/clients/MichealStJohn.jpg" alt="" loading="lazy"/>
+                <p>Micheal St. John</p>
               </picture>
           </div>
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi suscipit 
-              quam doloremque eaque ipsum eligendi incidunt? Sed, aut dolorum tenetur quisquam 
-              possimus assumenda dolore, maiores velit explicabo nostrum aspernatur consequatur nihil 
-              provident eveniet non suscipit quam delectus eaque nemo illum nobis. At assumenda eligendi 
-              provident nobis omnis ipsam enim?
+              " I needed a designer to create a promotional poster.
+							Coriano came to the rescue! He made my idea come to life.
+							I couldn't be happier."
             </p>
               <picture class="picture-clients">
-                <img class="img clients-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset="">
-                <p>Lorem ipsum dolor sit.</p>
+                <img class="img clients-img" src="./public/clients/LaurenBrynes.jpg" alt="" loading="lazy"/>
+                <p>Lauren Byrnes</p>
               </picture>
           </div>
 
           <div class="card client-quotes-card">
             <p class="quotes profile-quote">
-              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nisi suscipit 
-              quam doloremque eaque ipsum eligendi incidunt? Sed, aut dolorum tenetur quisquam 
-              possimus assumenda dolore, maiores velit explicabo nostrum aspernatur consequatur nihil 
-              provident eveniet non suscipit quam delectus eaque nemo illum nobis. At assumenda eligendi 
-              provident nobis omnis ipsam enim?
+              " His attention to detail and vast knowledge of the intricacies
+              of graphic design, added with the vision we had for our new
+              company logo equated into a piece of art that truly represents
+              our culture, students, and brand! "
             </p>
               <picture class="picture-clients">
-                <img class="img clients-img" src="https://via.placeholder.com/300.png/09f/fff" alt="" srcset="">
-                <p>Lorem ipsum dolor sit.</p>
+                <img class="img clients-img" src="./public/clients/RaeColeman.jpg" alt="" loading="lazy"/>
+                <p>Rae Coleman</p>
               </picture>
           </div>
 
@@ -145,11 +134,13 @@
         <hr class="separator">
         <h3>Clients...</h3>
         <ul class="list clients-list">
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
+          <li class="list-items">ALSAC (St. Jude)</li>
+          <li class="list-items">FedEx</li>
+          <li class="list-items">PartCycle</li>
+          <li class="list-items">Dare Dream Dance</li>
+          <li class="list-items">C4 Atlanta</li>
+          <li class="list-items">Lauren Brynes Production</li>
+          <li class="list-items">Michael St. John Confidential</li>
         </ul>
         <hr class="separator"> 
 
@@ -159,7 +150,7 @@
 
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of FedEx Tracking website" />
+              <img class="img project-img" src="./public/projects/fedex_tracking.png" alt="image of FedEx Tracking website" loading="lazy"/>
             </picture>
             <div class="card-info">
               <h4 class="card-company">Company: <span>FedEx</span></h4>
@@ -174,12 +165,12 @@
           </div>
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of PartCycle website"/>
+              <img class="img project-img" src="./public/projects/partcycle.png" alt="image of PartCycle website" loading="lazy"/>
             </picture>
             <div class="card-info">
               <h4 class="card-company">Company: <span>PartCycle</span></h4>
               <h4 class="card-role">Role: <span>developer</span></h4>
-              <button class="btn project-link">
+              <button class="btn project-link" role="button">
                 <span class="circle">
                   <span class="icon arrow"></span>
                 </span>
@@ -189,12 +180,12 @@
           </div>
           <div class="card clients-project-card">
             <picture class="picture-projects">
-              <img class="img project-img" src="https://via.placeholder.com/300.png/09f/fff" alt="image of My Supporter Account website"/>
+              <img class="img project-img" src="./public/projects/my_supporter_acct.png" alt="image of My Supporter Account website" loading="lazy"/>
             </picture>
             <div class="card-info">
               <h4 class="card-company">Company: <span>ALSAC ( St. Jude Hospital )</span></h4>
               <h4 class="card-role">Role: <span>developer</span></h4>
-              <button class="btn project-link">
+              <button class="btn project-link" role="button">
                 <span class="circle">
                   <span class="icon arrow"></span>
                 </span>
@@ -208,14 +199,28 @@
 
         <h3>Toolbox...</h3>
 
+        <h4>Graphic Design</h4>
+
+        <ul class="list skills-list">
+          <li class="list-items">typography</li>
+          <li class="list-items">adobe creative suite</li>
+          <li class="list-items">color thoery</li>
+          <li class="list-items">coloristic</li>
+          <li class="list-items">design patterns</li>
+        </ul>
+
+      <hr class="separator">
+
         <h4>UX</h4>
 
         <ul class="list skills-list">
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
+          <li class="list-items">google analytics</li>
+          <li class="list-items">usertesting.com</li>
+          <li class="list-items">optimalsort</li>
+          <li class="list-items">hci</li>
+          <li class="list-items">personas</li>
+          <li class="list-items">quantitative research</li>
+          <li class="list-items">qualitative research</li>
         </ul>
 
       <hr class="separator">
@@ -223,11 +228,13 @@
         <h4>UI</h4>
 
         <ul class="list skills-list">
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
+          <li class="list-items">wireframes</li>
+          <li class="list-items">mockups</li>
+          <li class="list-items">information architecture</li>
+          <li class="list-items">sketch</li>
+          <li class="list-items">adobe xd</li>
+          <li class="list-items">invision</li>
+          <li class="list-items">figma</li>
         </ul>
 
         <hr class="separator">
@@ -235,11 +242,18 @@
         <h4>Development</h4>
 
         <ul class="list skills-list">
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
+          <li class="list-items">html5</li>
+          <li class="list-items">css3</li>
+          <li class="list-items">javascript</li>
+          <li class="list-items">react.js</li>
+          <li class="list-items">node.js</li>
+          <li class="list-items">ember.js</li>
+          <li class="list-items">sass</li>
+          <li class="list-items">sql</li>
+          <li class="list-items">mongodb</li>
+          <li class="list-items">rest api</li>
+          <li class="list-items">netlify</li>
+          <li class="list-items">computer science</li>
         </ul>
 
         <hr class="separator">
@@ -247,20 +261,18 @@
         <h4>Soft Skiills</h4>
 
         <ul class="list skills-list">
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
-          <li class="list-items">company</li>
+          <li class="list-items">public-speaking</li>
+          <li class="list-items">mentoring</li>
+          <li class="list-items">time-management</li>
         </ul>
 
         <hr class="separator">
 
-        <p class="info-notify project-info-notify" >View personal project upon request.</span></p>
+        <p class="info-notify project-info-notify" aria-label="view personal project upon request">View personal project upon request.</span></p>
 
         </section>
 
-        <h2>Let's Talk...</h2>
+        <h2 id="contact">Let's Talk...</h2>
 
         <section class="section form">
 
@@ -269,40 +281,40 @@
           method="POST"
           role="form"
 				  aria-label="contact form">
-            <label class="custom-field one" required>
-              <input 	id="name" type="text" placeholder="your name" pattern="^([\w ]+){2,200}" required/>
+            <label class="custom-field one" aria-label="name form field">
+              <input 	id="name" type="text" placeholder="your name" pattern="^([a-zA-Z ]*$){2,200}" required/>
               <span class="placeholder">name<span>*</span></span>
-              <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+              <span class="validation-error-message" aria-label="Please enter your name with letters only.">Please enter your name with letters only.</span>
             </label>
                   
-            <label class="custom-field two">
+            <label class="custom-field two" aria-label="phone number form field">
               <input id="phone" type="tel" maxlength="15" placeholder="000-000-0000" pattern="^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$"
               />
               <span class="placeholder">phone numbers</span>
-              <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+              <span class="validation-error-message" aria-label="Please enter your phone number with digits only.">Please enter your phone number with digits only.</span>
             </label>
             
-              <label class="custom-field three">
+              <label class="custom-field three" aria-label="email form field">
                 <input id="email" type="email" placeholder="username@domain" pattern="^([0-9a-zA-Z]([-\.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})"/>
                 <span class="placeholder">email<span>*</span></span>
-                <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+                <span class="validation-error-message"aria-label="">Please enter your email.</span>
               </label>
 
-              <label class="custom-field four">
+              <label class="custom-field four" aria-label="subject form field">
                 <input id="subject" type="text" placeholder="title" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,50}"/>
                 <span class="placeholder">subject<span>*</span></span>
-                <span class="validation-error-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+                <span class="validation-error-message" aria-label="Please enter your subject text.">Please enter your subject text.</span>
               </label>
                   
-              <label class="custom-field five" required="required">
+              <label class="custom-field five" aria-label="name form field">
                 <textarea id="message" cols="30" rows="10" placeholder="Your message" pattern="^([a-z]|[A-Z]|[0-9]|[\w ]+){1,500}"></textarea>
                 <span class="placeholder">Enter message</span>
-                <span class="validation-error-message validation-error-message-textarea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, corporis.</span>
+                <span class="validation-error-message validation-error-message-textarea" aria-label="lease enter your message.">Please enter your message.</span>
               </label>
 
-              <p class="info-notify form-info-notify" >Submitting this form will open and autopopulate your email client</span></p>
+              <p class="info-notify form-info-notify" aria-label="Submitting this form will open and autopopulate the form data in your email client" >Submitting this form will open and autopopulate the form data in your email client</span></p>
 
-              <div class="button-container">
+              <div class="button-container" role="button">
                 <button id="submit"
                   class="button" 
                   aria-label="contact form submit button"> 
@@ -313,12 +325,12 @@
 
         </section>
 
-        <section class="section footer">
+        <footer class="section footer">
           <p class="copyright">&copy;
             Coriano Harris
             <span class="copyright-year"></span>
           </p>
-        </section>
+        </footer>
 
       </div>
 
