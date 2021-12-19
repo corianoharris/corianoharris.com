@@ -363,9 +363,10 @@ picture {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  width: 100%;
+  width: auto;
   color: white;
   transform: scale(60%);
+  text-align: center;
 }
 
 .social-media-links a {
@@ -383,7 +384,7 @@ picture {
 @media (min-width: 648px) {
   .social-media {
     flex-direction: row;
-    gap: 3rem;
+    gap: 5rem;
   }
 }
 
