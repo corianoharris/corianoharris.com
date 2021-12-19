@@ -152,7 +152,7 @@ margin: 30px 0;
 }
 
 h2 {
-  margin: 40px 0;
+  margin: 30px 0 20px 0;
   text-align: center;
 }
 
@@ -204,6 +204,10 @@ nav span {
   background-color: var(--info-color);
   color: var(--text-color);
   display: inline-block;
+}
+
+.my-name {
+  margin: 20px 0;
 }
 
 .email {
@@ -413,7 +417,7 @@ picture {
 
 .clients-project-card {
   height: auto;
-  width: auto;
+  width: 280px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   word-wrap: break-word;
 }
@@ -752,7 +756,7 @@ color: white;
   border-radius: 0;
   position: relative;
   bottom: 0;
-  background-color: grey;
+  border: 1px solid grey;
 }
 
 .copyright {
@@ -764,7 +768,6 @@ color: white;
 .hidden {
   display: none;
 }
-
 
 /* button */
 
@@ -825,8 +828,6 @@ button.btn .circle .icon.arrow::before {
           transform: rotate(45deg);
 }
 
-
-
 .button-text {
   display: flex;
   justify-content: center;
@@ -869,7 +870,7 @@ button:hover .button-text {
 
 .email-link-text {
   padding-left: 30px;
-  font-size: .7rem;
+  font-size: .8rem;
 }
 
 .project-link {
