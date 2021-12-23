@@ -85,6 +85,7 @@ body {
   color: white;
   background-color: var(--primary-bkgd-color);
   line-height: 1.625rem;
+  text-transform: uppercase;
 }
 
 .app-wrapper {
@@ -119,17 +120,28 @@ a {
   font-weight: 100;
   text-transform: lowercase;
   letter-spacing: .2rem;
+  display: none;
+}
+.nav-items {
+  cursor: pointer;
+}
+.nav-item a {
+  display: block;
 }
 
-/* a:visited {
-  color: white;
+.nav-item:visited {
+  color: grey;
+  padding-bottom: 2px;
+  border-bottom: 1px solid grey;
 }
-a:hover {
-  color: g;
+.nav-item:hover {
+  color: grey;
 }
-a:active {
+.nav-item:active {
   color: white;
-} */
+  padding-bottom: 2px;
+  border-bottom: 1px solid white;
+}
 
 .separator {
 margin: 30px 0;
@@ -161,13 +173,15 @@ margin: 30px 0;
 }
 
 h2 {
-  margin: 40px 0 20px 0;
+  margin: 40px auto 20px auto;
   text-align: center;
   font-size: 40px;
   font-weight: 900;
-  text-transform: capitalize;
-  padding-bottom: 10px;
-  text-decoration: underline;
+  padding: 10px 0;
+  border-top: 2px dotted white;
+  border-bottom: 8px solid white;
+  width: 150px;
+  line-height: 2.750rem;
 
 }
 
@@ -178,6 +192,14 @@ h3 {
   text-transform: uppercase;
   letter-spacing: .5rem;
   margin: 20px 0;
+  border-bottom: 3px dotted grey;
+  width: 100%;
+}
+
+@media (min-width: 648px) {
+  h3 {
+    width: 45%;
+  }
 }
 
 /* COMPONENTS */
@@ -232,12 +254,25 @@ nav span {
   display: inline-block;
 }
 
-.my-name {
+.name {
   margin: 20px auto;
+}
+
+.my-name {
   font-size: 32px;
+  font-weight: 200;
+  letter-spacing: .2rem;
+  line-height: 1.625rem;
+}
+.last-name {
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: .5rem;
-  line-height: 2rem;
+}
+
+.roles {
+  font-size: 32px;
+  font-weight: 100;
+  text-transform: lowercase;
 }
 
 .email {
@@ -286,6 +321,7 @@ picture {
   border: 1px solid var(--info-color);
   padding: 10px;
   border-radius: .5rem;
+  font-size: .7rem;
   font-weight: 200;
 }
 
@@ -390,9 +426,8 @@ picture {
 
 .img {
   border-radius: 50%;
-  padding: 10px;
-  border-left: 5px solid grey;
-  border-right: 5px solid grey;
+  padding: 5px;
+  border: 5px solid grey;
 }
 
 .profile {
@@ -422,6 +457,10 @@ picture {
 .clients-img {
   width: 30px;
   height: 30px;
+}
+.picture-clients p {
+  text-transform: capitalize;
+  font-style: italic;
 }
 
 .project-img {
@@ -464,6 +503,10 @@ picture {
   .clients-project-card {
     width: 350px;
   }
+}
+
+.card-company, .card-role {
+  font-size: .7rem;
 }
 
 .card-company span, .card-role span {
@@ -829,7 +872,7 @@ button {
   text-decoration: none;
   background: transparent;
   padding: 0;
-  font-size: 10px;
+  font-size: .8rem;
   font-family: inherit;
 }
 button.btn {
@@ -843,16 +886,14 @@ button.btn .circle {
   display: block;
   justify-content: center;
   margin: 0;
-  width: 100%;
+  width: 3rem;
   height: 3rem;
   background: #666;
   border-radius: 1.625rem;
 }
 
-@media (min-width: 900px) {
-  button.btn .circle {
-    width: 300px;
-  }
+button.btn:hover .circle {
+  width: 100%;
 }
 
 button.btn .circle .icon {
@@ -898,9 +939,7 @@ button.btn .button-text {
   left: 0;
   right: 0;
   bottom: 0;
-  /* padding: 0.75rem 0 0.75rem 25px; */
-  /* margin: 0 0 0 1.85rem; */
-  color: #282936;
+  /* color: #282936; */
   font-weight: 700;
   line-height: 1.6;
   text-align: left;
@@ -909,7 +948,7 @@ button.btn .button-text {
 }
 
 .button.btn .button-text a {
-  /* text-align: left; */
+  text-align: left;
   margin-left: none;
 }
 
@@ -924,11 +963,9 @@ button:hover .button-text {
 }
 
 .email-link-text a {
-  font-size: .825rem;
-  font-weight: 900;
-  background-color: grey;
-  padding: 5px 10px;
-  border-radius: 5rem;
+  display: block;
+  padding-top: 7px;
+  color: white;
 }
 
 .project-link {
@@ -943,9 +980,11 @@ button:hover .button-text {
 button.btn .project-link-text {
   position: relative;
   left: 10px;
-  top: -40px;
-  font-size: 1rem;
+  top: -45px;
+  font-size: 1.25rem;
+  font-weight: 900;
 }
+
 .project-info-notify {
   font-weight: 700;
   width: 280px;

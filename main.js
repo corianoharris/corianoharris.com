@@ -1,4 +1,20 @@
 
+const firstNavLink = document.querySelectorAll(".nav-item")[0];
+const lastNavLink = document.querySelectorAll(".nav-item")[2];
+
+firstNavLink.addEventListener('keydown', (e) => {
+	if(e.shiftKey && e.key === 'Tab') {
+		lastNavLink.focus();
+	}
+})
+
+lastNavLink.addEventListener('keydown', (e) => {
+	if(e.key === 'Tab') {
+		firstNavLink.focus();
+	}
+})
+
+
 const navLinksContainer = document.querySelector(".nav-items");
 const navIcon = document.querySelector(".nav-icon");
 
