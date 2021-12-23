@@ -60,7 +60,6 @@ function contact_submit(e) {
 
 	// Open Mailto in New Window / Tab
 	window.open(uri, '_blank');
-	alert('Message created for submission.');
 }
 
 const copyrightYear = document.querySelector('.copyright-year');
