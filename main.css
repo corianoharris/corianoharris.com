@@ -1,22 +1,20 @@
 
 /* --- Base --- */
 
+/* imports */
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Bungee+Shade&family=Monoton&display=swap");
+
+
 /* css variables */
 :root {
-  --boxshadow: box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  --color-dark-bkgd: #a9a9a9;
+  --color-dark-bkgd: #1f1f1f;
   --color-light-bkgd: ##fff;
-  --color-dark-text: white;
-  --color-light-text: black;
-  --color-brand:  #670000;
-  --color-info: #333333;
+  --color-brand:  #009092;
+  --color-info: #343434;
   --color-error: #990000;
   --font-family: "Raleway",
     sans-serif;
 }
-/* imports */
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Bungee+Shade&family=Monoton&display=swap");
-
 
 /* Box sizing rules */
 *,
@@ -52,9 +50,11 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
+  background-color: var(--background-color);
+  color: var(--text-color);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.5rem;
 }
 
 /* A elements that don't have a class get default styles */
@@ -95,8 +95,8 @@ select {
 
 /* globals */
 body {
-  background-color: var(--color-dark-bkgd);
-  color: var(--color-dark-text);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: var(--font-family);
   line-height: 1.625rem;
   text-transform: uppercase;
@@ -120,6 +120,7 @@ h3 {
   font-size: 28px;
   font-weight: 900;
   letter-spacing: .5rem;
+  line-height: 2rem;
   margin: 20px 0;
   text-transform: uppercase;
   width: 100%;
@@ -148,18 +149,19 @@ a {
   text-transform: lowercase;
 }
 a:link, a:active, a:hover, a:visited {
-  color: var(--color-info);
+  color: var(--color-brand);
 }
 
-picture {
-  margin-top: 20px;
-}
 
 .img {
   border: 5px solid var(--color-brand);
   border-radius: 50%;
   padding: 5px;
   text-align: center;
+}
+
+input {
+  padding: 10px 5px;
 }
 
 /* --- layouts --- */
@@ -191,15 +193,15 @@ nav {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   margin-right: 20px;
   width: auto;
-  height: 3rem;
+  height: 3.5rem;
   background: var(--color-brand);
-  border: 1px solid var(--info-color);
   border-radius: 1.625rem;
-  box-shadow: -13px 8px 55px -2px black;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 2000;
 }
 .nav-icon {
-  color: var(--color-dark-text);
+  color: var(--color-light-bkgd);
+  font-size: 42px;
 }
 
 nav span {
@@ -210,13 +212,14 @@ nav span {
 
 .nav-items {
   align-items: center;
-  border-left: thin solid var(--color-brand);
+  border-left: thick solid var(--color-dark-bkgd);
   display: flex;
   gap: 2rem;
   height: 100%;
   justify-content: flex-start;
   margin-right: 20px;
   padding-left: 10px;
+
 }
 
 .nav-item a {
@@ -248,7 +251,7 @@ nav span {
 
 .project-info-notify {
   font-weight: 700;
-  width: 280px;
+  width: auto;
 }
 
 /* error */
@@ -281,8 +284,9 @@ nav span {
 /** quotes **/
 .quotes {
   font-style: italic;
-  font-weight: 100;
+  font-weight: 300;
   padding: 10px;
+  text-transform: lowercase;
   word-break: word-break;
 }
 
@@ -304,8 +308,6 @@ nav span {
   }
 }
 
-
-
 @media (min-width: 648x) {
   .client-quotes-card {
   width: 350px;
@@ -321,11 +323,11 @@ nav span {
 }
 
 .list-items {
-  border: 2px solid var(--color-brand);
+  background-color: var(--color-brand);
   border-radius: .5rem;
   box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   font-size: .7rem;
-  font-weight: 200;
+  font-weight: 900;
   padding: 10px;
 }
 
@@ -334,14 +336,13 @@ nav span {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   height: 100%;
   margin-bottom: 20px;
-  padding: 10px 0 0px 0;
+  /* padding: 10px 0 0px 0; */
   width: 100%;
 }
 .card-info {
   align-items: center;
   display: block;
   justify-content: center;
-  margin-top: -8px;
   padding: 10px;
   text-align: center;
 }
@@ -393,6 +394,7 @@ nav span {
 }
 .project-img {
   border: 0;
+  border-bottom: 5px solid var(--color-brand);
   border-radius: 0;
   padding: 0;
   width: 100%;
@@ -417,11 +419,15 @@ nav span {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.picture-projects {
+  margin-top: none;
+}
 .card-company, .card-role {
   font-size: .7rem;
 }
 
-.card-company span, .card-role span {
+.card-company-name, .card-company-role {
+  color: var(--color-light-bkgd);
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: .1rem;
@@ -461,11 +467,11 @@ button.btn .circle {
 
 button.btn:hover .circle {
   width: 100%;
-  color: var(--color-dark-text);
+  color: var(--color-light-bkgd);
 }
 
 .button.btn:hover .button-text{
-  color: var(--color-dark-text);
+  color: var(--color-light-bkgd);
 }
 
 button.btn .circle .icon {
@@ -473,38 +479,29 @@ button.btn .circle .icon {
   top: 0;
   bottom: 0;
   margin: auto;
-  background: var(--color-dark-text);
+  background: var(--color-light-bkgd);
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 }
 button.btn .circle .icon.arrow {
-  background: none;
+  position: absolute;
+  top: -20px;
+  background: var(--color-light-bkgd);
   height: 0.125rem;
   left: 0.625rem;
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   width: 1.125rem;
+  font-size: 32px;
 }
-button.btn .circle .icon.arrow::before {
-  border-right: 0.125rem solid var(--color-dark-text);
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  border-top: 0.125rem solid var(--color-dark-text);
-  content: '';
-  height: 0.625rem;
-  position: absolute;
-  right: 0.0625rem;
-  top: -0.25rem;
-  width: 0.625rem;
-}
-
 .button-text {
   align-items: center;
   display: flex;
   font-size: .8rem;
   justify-content: center;
   padding-left: 10px;
+  
 }
 .button-text:hover a {
-  color: var(--color-dark-text);
+  color: var(--color-light-bkgd);
 }
 
 button.btn .button-text {
@@ -527,13 +524,13 @@ button.btn .button-text {
 }
 
 button:hover .circle .icon.arrow {
-  background: var(--color-brand);
+  background: var(--color-light-bkgd);
   -webkit-transform: translate(1rem, 0);
           transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
-  color: var(--color-dark-text);
+  color: var(--color-light-bkgd);
 }
 
 .email-link-text a {
@@ -555,6 +552,13 @@ button.btn .project-link-text {
   position: relative;
   left: 10px;
   top: -45px;
+}
+@media (min-width: 900px) {
+  button.btn .project-link-text {
+    font-size: 1.75rem;
+    left: 20px;
+    top: -55px;
+  }
 }
 
 /* --- custom --- */
@@ -589,15 +593,17 @@ button.btn .project-link-text {
 .name {
   margin: 20px auto;
   letter-spacing: .2rem;
-  line-height: 1.625rem;
+  gap: 1rem;
+  line-height: 2rem;
 }
-.my-name {
-  font-size: 32px;
-  font-weight: 200;
-  
+.first-name {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1.5rem;
 }
 .last-name {
-  font-size: 20px;
+  font-size: 42px;
+  letter-spacing: .5rem;
   font-weight: 700;
 }
 .profile-quotes {
@@ -657,7 +663,7 @@ button.btn .project-link-text {
 /* form */
 form {
   display: inline-block;
-  width: 90%;
+  width: 100%;
 }
 @media (min-width: 640px) {
     form {
@@ -673,23 +679,30 @@ form {
   position: relative;
   font-size: 14px;
   margin:  10px 0;
-  padding: 12px;
+  padding: 12px 0;
   top: 0;
-  width: auto;
+  width: 100%;
 }
 .custom-field input, .custom-field textarea {
   appearance: none;
   border: none;
   border-radius: 3px;
   font-size: 14px;
-  margin: 20px 0;
-  padding: 12px;
   outline: none;
   width: 100%;
   -webkit-appearance: none;
   -ms-appearance: none;
   -moz-appearance: none;
 }
+
+.custom-field input {
+  margin: 10px 0;
+}
+
+.custom-field textarea  {
+margin: 20px 0;
+}
+
 .custom-field .placeholder {
   left: 12px;
   line-height: 100%;
@@ -713,7 +726,7 @@ form {
   border: 2px solid var(--color-brand);
   transition: border-color 0.3s ease;
 }
-.custom-field.one input + .placeholder, .custom-field.two input + .placeholder, .custom-field.three input + .placeholder, .custom-field.four input + .placeholder  {
+.custom-field.one input + .placeholder, .custom-field.two input + .placeholder, .custom-field.three input + .placeholder, .custom-field.four input + .placeholder  {   
   left: 0;
   padding: 5px;
   top: -2px;
@@ -724,7 +737,7 @@ form {
 }
 
 .custom-field.five textarea + .placeholder {
-  top: -170px;
+  top: -275px;
   left: 0;
   padding: 5px;
 }
@@ -754,6 +767,7 @@ form {
 .button {
   border: 1px solid var(--color-brand);
   border-radius: .3rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: var(--color-brand);
   font-size: 1rem;
   margin: 30px 0;
@@ -781,15 +795,16 @@ form {
 .nav-item a:visited {
   border-bottom: 1px solid var(--color-info);
   color: var(--color-info);
-  padding-bottom: 2px;
+  padding-bottom: 3px;
 }
 .nav-item a:hover {
-  background-color: var(--color-brand);
+  border-bottom: 2px solid white;
   color: white;
+  padding-bottom: 3px;
 }
 .nav-item a:active, .nav-item a:link{
-  border-bottom: 2px solid var(--color-brand);
-  color: var(--color-brand);
+  border-bottom: 2px solid black;
+  color: black;
   padding-bottom: 3px;
 }
 
@@ -859,12 +874,11 @@ input:not(:focus)::placeholder,textarea:not(:focus)::placeholder{
 .custom-field.five textarea.dirty + .placeholder,
 .custom-field.five textarea:not(:placeholder-shown) + .placeholder,
 .custom-field.five textarea:focus + .placeholder {
-  border: 1px solid var(--color-brand);
   border-radius: .5rem;
   color: var(--color-brand);
   font-size: 15px;
   padding:8px 5px;
-  top: -200px;
+  top: -290px;
   width: auto;
 }
 
